@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pokemon_blue_shadow"
+    android:padding="16dp"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+
+
+
+        <ImageView
+            android:id="@+id/detailFragment_Image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pokemon_image_height"
+            android:layout_below="@id/detailFragment_star_container"
+            android:background="@drawable/silver_gradient"
+            tools:src="@drawable/place_holder_img" />
+
+        <LinearLayout
+            android:id="@+id/detailFragment_star_container"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/detailFragment_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:text="Pikachu" />
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/stats_title_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/abilities_container"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="100">
+
+
+            <TextView
+                android:id="@+id/detailFragment_title_stats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:text="Statistics"
+                android:textColor="@color/white"
+                android:textSize="@dimen/pokemon_type_text_size"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stats_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stats_title_container"
+            android:orientation="vertical"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detailFragment_Image"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/detailFragment_title_abilities"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recipe_title"
+                android:layout_weight="90"
+                android:text="Abilities"
+                android:textColor="@color/white"
+                android:textSize="@dimen/pokemon_type_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detailFragment_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/pokemon_type_text_size"
+                tools:text="Type: Grass" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/abilities_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/container"
+            android:orientation="vertical"
+            android:padding="10dp" />
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
